@@ -1,5 +1,5 @@
 # Bio111 Project1
-The code and data for students to get started with Project 1 data analysis.
+This repo includes code and data for students to get started with Project 1 data analysis.
 These data come from the two sections of Bio111 from 2019.
 
 ## The data
