@@ -5,6 +5,8 @@ date: "10/1/2019"
 output: html_document
 ---
 
+This is the code I used to reformat data from files the 2019 class submited to the easier to use version we used for the analysis. It makes heavy use of the package `dplyr` and the pipe `%>%` from the package `magrittr`, both of which are part of the `tidyverse`. See chapters 5 and in [R for Data Science](https://r4ds.had.co.nz/) for a great introduction. 
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
@@ -41,51 +43,4 @@ Combined_sequencing_data_rpoB_or_not %>%
   write_tsv(path ="Bio111 rpoB or not 2019.tsv")
 ```
 
-```{r}
-Bio111_mutations_2019 <- read_csv("Bio111 mutations 2019.csv")
-
-```
-```{r}
-difference_in_alleles <- function(data_frame, level1, level2){
-  all_mutations_level1 <- data_frame$mutation[data_frame$antibiotic_concentration==level1]
-  all_mutations_level2 <- data_frame$mutation[data_frame$antibiotic_concentration==level2]
-  
-  distinct_mutation_level1 <- unique(all_mutations_level1)
-  distinct_mutation_level2 <- unique(all_mutations_level2)
-  
-  difference <- length(distinct_mutation_level1) - length(distinct_mutation_level2)
-  difference
-}
-
-```
-
-Here is sample code for running the randomization
-
-```{r}
-condition1 <- "high"
-condition2 <- "low"
-
-number_replicates <- 10000
-randomized_diffs <- vector(length=number_replicates) #This is the vector that will hold the result of each randomization
-
-for (i in 1:number_replicates) {
-  shuffled_mutations <- sample(Bio111_mutations_2019$mutation) #This is a R function that, in this case, shuffles the order of all the entries in the vector
-  randomized_data_frame <- data.frame(Bio111_mutations_2019$antibiotic_concentration, shuffled_mutations)
-  colnames(randomized_data_frame) <- c("antibiotic_concentration", "mutation")
-  randomized_diffs[i] <- difference_in_alleles(randomized_data_frame, level1=condition1, level2=condition2)
-  }
-
-obs_diff <- difference_in_alleles(data_frame = Bio111_mutations_2019, level1 = condition1, level2 = condition2)
-
-a <- sum(randomized_diffs >= abs(obs_diff))
-b <- sum(randomized_diffs <= -abs(obs_diff))
-(a + b) /number_replicates #The 2-tailed p-value
-```
-```{r}
-Bio111_mutations_2019 %>%
-  group_by(antibiotic_concentration) %>%
-  summarise(length(unique(mutation)), n())
-
-
-```
 

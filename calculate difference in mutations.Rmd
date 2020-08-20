@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #Notes on using this file
 1. This file includes some code snipits that you may find useful in analyzing your data. It is not the sum total of all of the useful things you might do to explore and understand the results of your experiment. Do not use this as a template for everything you need to do.
 
-2. This analysis is done entirely in base R, so it should work fine with the instaliation of R you use for Biostatistics. This code uses a test data file. You'll need to modify it to work with the actual class data.
+2. This analysis is done entirely in base R, so it should work fine with the installation of R you use for Biostatistics. This code uses a test data file. You'll need to modify it to work with the actual class data.
 
 #Part 1: Testing the diversity of mutations in rpoB
 
@@ -69,7 +69,7 @@ I recommend you use the default method (Holm), but you can learn more about your
 
 #Part 2: Testing frequency of mutations inside and outside of rpoB
 
-We can use a chi-square test for this case. Note that the data below are an example. You'll need to enter your own data. 
+We can use a chi-square test to determine if there is a significant difference of the frequency of mutations inside and outside *rpoB* at the different concentrations. Note that the data below are an example. You'll need to enter your own data. 
 
 ```{r}
 rif_mutations <- matrix(c(54,12,61,15,72,19), nrow=2, ncol=3, dimnames=list(c("in rpoB", "outside rpoB"), c("low", "med", "high")))
