@@ -1,0 +1,61 @@
+student	antibiotic conc	inside or outside	number of mutants
+abel sapirstein	low	in rpoB	2
+abel sapirstein	low	outside rpoB	3
+abel sapirstein	med	in rpoB	3
+abel sapirstein	med	outside rpoB	2
+abel sapirstein	high	in rpoB	5
+abel sapirstein	high	outside rpoB	0
+Peyton Witte	low	in rpoB	4
+Peyton Witte	low	outside rpoB	1
+Peyton Witte	med	in rpoB	2
+Peyton Witte	med	outside rpoB	2
+Peyton Witte	high	in rpoB	3
+Peyton Witte	high	outside rpoB	0
+Mikayla Stabile	low	in rpoB	2
+Mikayla Stabile	low	outside rpoB	3
+Mikayla Stabile	med	in rpoB	3
+Mikayla Stabile	med	outside rpoB	0
+Mikayla Stabile	high	in rpoB	2
+Mikayla Stabile	high	outside rpoB	0
+Rachael Soh	low	in rpoB	3
+Rachael Soh	low	outside rpoB	2
+Rachael Soh	med	in rpoB	3
+Rachael Soh	med	outside rpoB	1
+Rachael Soh	high	in rpoB	4
+Rachael Soh	high	outside rpoB	0
+Emily Petroni	low	in rpoB	2
+Emily Petroni	low	outside rpoB	3
+Emily Petroni	med	in rpoB	3
+Emily Petroni	med	outside rpoB	0
+Emily Petroni	high	in rpoB	5
+Emily Petroni	high	outside rpoB	0
+Gabby	low	in rpoB	1
+Gabby	low	outside rpoB	2
+Gabby	med	in rpoB	4
+Gabby	med	outside rpoB	0
+Gabby	high	in rpoB	3
+Gabby	high	outside rpoB	0
+Candice	low	in rpoB	1
+Candice	low	outside rpoB	2
+Candice	med	in rpoB	4
+Candice	med	outside rpoB	0
+Candice	high	in rpoB	3
+Candice	high	outside rpoB	0
+Sophia	low	in rpoB	1
+Sophia	low	outside rpoB	4
+Sophia	med	in rpoB	2
+Sophia	med	outside rpoB	1
+Sophia	high	in rpoB	2
+Sophia	high	outside rpoB	0
+Angel	low	in rpoB	0
+Angel	low	outside rpoB	1
+Angel	med	in rpoB	4
+Angel	med	outside rpoB	0
+Angel	high	in rpoB	4
+Angel	high	outside rpoB	0
+Hanae	low	in rpoB	0
+Hanae	low	outside rpoB	2
+Hanae	med	in rpoB	1
+Hanae	med	outside rpoB	2
+Hanae	high	in rpoB	3
+Hanae	high	outside rpoB	2

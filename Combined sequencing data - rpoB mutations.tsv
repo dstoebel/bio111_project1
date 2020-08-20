@@ -1,0 +1,80 @@
+student	antibiotic_concentration	mutation
+abel sapirstein 	50	T563P
+abel sapirstein 	50	I572F
+abel sapirstein 	100	G534D
+abel sapirstein 	100	T563P
+abel sapirstein 	100	I572F
+abel sapirstein 	200	I572P
+abel sapirstein 	200	I572F
+abel sapirstein 	200	T563P
+abel sapirstein 	200	I572F
+abel sapirstein 	200	P564L
+Peyton Witte	50	S574F
+Peyton Witte	50	Q513P
+Peyton Witte	50	R529H
+Peyton Witte	50	T563P
+Peyton Witte	100	G534D
+Peyton Witte	100	R529H
+Peyton Witte	200	I572S
+Peyton Witte	200	G534D
+Peyton Witte	200	P564L
+Mikayla Stabile	50	T563P
+Mikayla Stabile	50	Q513R
+Mikayla Stabile	100	S531Y
+Mikayla Stabile	100	I572S
+Mikayla Stabile	100	T563P
+Mikayla Stabile	200	D516G
+Mikayla Stabile	200	S522F
+Emily Petroni	200	I572S
+Emily Petroni	100	T563P
+Emily Petroni	200	T563P
+Emily Petroni	200	T563P
+Emily Petroni	50	L511Q
+Emily Petroni	50	S531F
+Emily Petroni	200	L533H
+Emily Petroni	200	S512F
+Emily Petroni	100	D516G
+Emily Petroni	100	D516G
+Rachael Soh	50	L533H
+Rachael Soh	50	L533P
+Rachael Soh	50	T563P
+Rachael Soh	100	P564L
+Rachael Soh	100	S531F
+Rachael Soh	100	T563P
+Rachael Soh	200	S531F
+Rachael Soh	200	S522Y
+Rachael Soh	200	D516G
+Rachael Soh	200	G570C
+Gabby 	Low	G534A
+Gabby 	Med	T563P
+Gabby 	Med	T563P
+Gabby 	Med	D516G
+Gabby 	Med	D516G
+Gabby 	High	T563P
+Gabby 	High	S512F
+Gabby 	High	D516Y
+Candice	Low	H526Q
+Candice	Med	Q513K
+Candice	Med	T563P
+Candice	Med	D516G
+Candice	Med	T563P
+Candice	High	D516G
+Candice	High	D516N
+Candice	High	T563P
+Sophia	Low	I572F
+Sophia	Med	D516G
+Sophia	Med	T563P
+Sophia	High	T563P
+Sophia	High	I572F
+Angel 	Med	S509F
+Angel 	Med	D516G
+Angel 	Med	T563P
+Angel 	Med	L533P
+Angel 	High	S574F
+Angel 	High	H526Y
+Angel 	High	L533P
+Angel 	High	D516G
+Hanae	Med	S512P
+Hanae	High	T563P
+Hanae	High	P564L
+Hanae	High	H526Y

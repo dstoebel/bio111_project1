@@ -1,0 +1,16 @@
+#This is hypothetical data to test our code
+#Note that each row is an observation and each column a variable; this is tidy data. 
+
+antibiotic_concentration	mutation
+low	D516V
+low	H526N
+low	I572F
+low	D516N
+low	D516N
+low	R529H
+high	H526N
+high	H526N
+high	H526N
+high	I572F
+high	I572F
+high	I572F

@@ -1,0 +1,80 @@
+student,antibiotic_concentration,mutation
+abel sapirstein,low,T563P
+abel sapirstein,low,I572F
+abel sapirstein,med,G534D
+abel sapirstein,med,T563P
+abel sapirstein,med,I572F
+abel sapirstein,high,I572P
+abel sapirstein,high,I572F
+abel sapirstein,high,T563P
+abel sapirstein,high,I572F
+abel sapirstein,high,P564L
+Peyton Witte,low,S574F
+Peyton Witte,low,Q513P
+Peyton Witte,low,R529H
+Peyton Witte,low,T563P
+Peyton Witte,med,G534D
+Peyton Witte,med,R529H
+Peyton Witte,high,I572S
+Peyton Witte,high,G534D
+Peyton Witte,high,P564L
+Mikayla Stabile,low,T563P
+Mikayla Stabile,low,Q513R
+Mikayla Stabile,med,S531Y
+Mikayla Stabile,med,I572S
+Mikayla Stabile,med,T563P
+Mikayla Stabile,high,D516G
+Mikayla Stabile,high,S522F
+Emily Petroni,high,I572S
+Emily Petroni,med,T563P
+Emily Petroni,high,T563P
+Emily Petroni,high,T563P
+Emily Petroni,low,L511Q
+Emily Petroni,low,S531F
+Emily Petroni,high,L533H
+Emily Petroni,high,S512F
+Emily Petroni,med,D516G
+Emily Petroni,med,D516G
+Rachael Soh,low,L533H
+Rachael Soh,low,L533P
+Rachael Soh,low,T563P
+Rachael Soh,med,P564L
+Rachael Soh,med,S531F
+Rachael Soh,med,T563P
+Rachael Soh,high,S531F
+Rachael Soh,high,S522Y
+Rachael Soh,high,D516G
+Rachael Soh,high,G570C
+Gabby,low,G534A
+Gabby,med,T563P
+Gabby,med,T563P
+Gabby,med,D516G
+Gabby,med,D516G
+Gabby,high,T563P
+Gabby,high,S512F
+Gabby,high,D516Y
+Candice,low,H526Q
+Candice,med,Q513K
+Candice,med,T563P
+Candice,med,D516G
+Candice,med,T563P
+Candice,high,D516G
+Candice,high,D516N
+Candice,high,T563P
+Sophia,low,I572F
+Sophia,med,D516G
+Sophia,med,T563P
+Sophia,high,T563P
+Sophia,high,I572F
+Angel,med,S509F
+Angel,med,D516G
+Angel,med,T563P
+Angel,med,L533P
+Angel,high,S574F
+Angel,high,H526Y
+Angel,high,L533P
+Angel,high,D516G
+Hanae,med,S512P
+Hanae,high,T563P
+Hanae,high,P564L
+Hanae,high,H526Y

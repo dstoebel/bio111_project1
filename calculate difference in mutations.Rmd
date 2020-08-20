@@ -1,0 +1,84 @@
+---
+title: "R Notebook"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Notes on using this file
+1. This file includes some code snipits that you may find useful in analyzing your data. It is not the sum total of all of the useful things you might do to explore and understand the results of your experiment. Do not use this as a template for everything you need to do.
+
+2. This analysis is done entirely in base R, so it should work fine with the instaliation of R you use for Biostatistics. This code uses a test data file. You'll need to modify it to work with the actual class data.
+
+#Part 1: Testing the diversity of mutations in rpoB
+
+This function calculates the difference in number of alleles between two antibiotic concentrations, given a data frame set up as in the sample.
+```{r}
+
+difference_in_alleles <- function(data_frame, level1, level2){
+  all_mutations_level1 <- data_frame$mutation[data_frame$antibiotic_concentration==level1]
+  all_mutations_level2 <- data_frame$mutation[data_frame$antibiotic_concentration==level2]
+  
+  distinct_mutation_level1 <- unique(all_mutations_level1)
+  distinct_mutation_level2 <- unique(all_mutations_level2)
+  
+  difference <- length(distinct_mutation_level1) - length(distinct_mutation_level2)
+  difference
+}
+
+```
+
+Here is sample code for running the randomization. You'll notice that it compares *two* levels, but you have more possible comparisons than that. Think about what comparisons you want to make.
+
+```{r}
+test_data <- read.delim("test_data.txt", comment.char="#")
+View(test_data) #Remember to inspect your data and make sure it was imported correctly!
+```
+
+```{r}
+condition1 <- "low"
+condition2 <- "high"
+
+number_replicates <- 10000
+randomized_diffs <- vector(length=number_replicates) #This is the vector that will hold the result of each randomization
+
+for (i in 1:number_replicates) {
+  shuffled_mutations <- sample(test_data$mutation) #This is a R function that, in this case, shuffles the order of all the entries in the vector
+  randomized_data_frame <- data.frame(test_data$antibiotic_concentration, shuffled_mutations)
+  colnames(randomized_data_frame) <- c("antibiotic_concentration", "mutation")
+  randomized_diffs[i] <- difference_in_alleles(randomized_data_frame, level1=condition1, level2=condition2)
+  }
+
+obs_diff <- difference_in_alleles(data_frame = test_data, level1 = condition1, level2 = condition2)
+
+a <- sum(randomized_diffs >= abs(obs_diff))
+b <- sum(randomized_diffs <= -abs(obs_diff))
+(a + b) /number_replicates #The 2-tailed p-value
+
+```
+
+If you conduct more than one comparison, you'll suffer from the multiple comparisons problem, where p-value are inflated. You can use the `p.adjust` function. For example, if you have done three comparisons, you can adjust their p-values as follows.
+
+```{r}
+p.adjust(c(0.0024, 0.041, 0.55), method = "holm")
+```
+I recommend you use the default method (Holm), but you can learn more about your other options in the help.
+
+#Part 2: Testing frequency of mutations inside and outside of rpoB
+
+We can use a chi-square test for this case. Note that the data below are an example. You'll need to enter your own data. 
+
+```{r}
+rif_mutations <- matrix(c(54,12,61,15,72,19), nrow=2, ncol=3, dimnames=list(c("in rpoB", "outside rpoB"), c("low", "med", "high")))
+
+#Confirm that the table was set up properly
+rif_mutations
+
+chisq.test(rif_mutations)
+
+```
+
+
