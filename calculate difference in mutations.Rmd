@@ -8,14 +8,14 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-#Notes on using this file
+#Important notes on using this file
 1. This file includes some code snipits that you may find useful in analyzing your data. It is not the sum total of all of the useful things you might do to explore and understand the results of your experiment. Do not use this as a template for everything you need to do.
 
 2. This analysis is done entirely in base R, so it should work fine with the installation of R you use for Biostatistics. This code uses a test data file. You'll need to modify it to work with the actual class data.
 
 #Part 1: Testing the diversity of mutations in rpoB
 
-This function calculates the difference in number of alleles between two antibiotic concentrations, given a data frame set up as in the sample.
+This function calculates the difference in number of alleles between two antibiotic concentrations, given a data frame set up as in the sample. Note the use of the function `unique`. You can learn more in the help.
 ```{r}
 
 difference_in_alleles <- function(data_frame, level1, level2){
@@ -28,7 +28,6 @@ difference_in_alleles <- function(data_frame, level1, level2){
   difference <- length(distinct_mutation_level1) - length(distinct_mutation_level2)
   difference
 }
-
 ```
 
 Here is sample code for running the randomization. You'll notice that it compares *two* levels, but you have more possible comparisons than that. Think about what comparisons you want to make.
