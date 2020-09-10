@@ -10,7 +10,7 @@ The two data files for this experiment are:
 
 **Bio111 rpoB or not 2019.tsv**
 
-Those files are the only ones that you absolutely need. However, you may also want code the following two files, which give you code you can use for your analysis and a test data set. 
+Those files are the only ones that you absolutely need. However, you may also want the following two files, which give you code you can use for your analysis and a test data set. 
 
 **calculate difference in mutations.Rmd**
 
